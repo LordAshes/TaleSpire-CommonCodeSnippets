@@ -3,6 +3,8 @@ This is a collection of code snippets and/or knowledge for common tasks when cre
 
 # Index
 
+Board.md = Information regarding whether a board has been loaded.
+
 Chat.md = Information regarding making assets speak both local and on all connected clients
 
 ChatMessageDetection.md = Information on how to read chat messages

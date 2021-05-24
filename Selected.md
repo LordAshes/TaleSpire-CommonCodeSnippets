@@ -1,11 +1,31 @@
 # Determine The Selected Mini
 
-To determine the selected mini (CreatureBoardAsset), one can track what mini was picked up. This can be done using code similar to:
+If you want to know the CreatureId of the selected asset, you ca use:
 
+````C#
+(NGuid)LocalClient.SelectedCreatureId.Value
+````
+
+If you need to get the CreatureBoardAsset from this, you can:
+
+````C#
+
+CreatureBoardAsset selectedMini = null;
+CreatureBoardAsset[] assets = CreaturePresenter.AllCreatureAssets.ToArray();
+foreach (CreatureBoardAsset asset in assets)
+{
+  if ((NGuid)LocalClient.SelectedCreatureId.Value == (NGuid)asset.Creature.CreatureId.Value)
+  {
+    selectedMini = asset;
+    break;
+  }
+}
+````
+
+Alternatively, you can track the selected asset by monitoring the pickup 'event' such as:
 
 ````C#
 CreatureBoardAsset selectedMini = null;
-
 void Update()
 {
     // Ensure that there is a board session manager instance
@@ -25,10 +45,4 @@ void Update()
         }
     }
 }
-````
-
-Alternatively if you just want to know the CreatureId that is selcted, you can use:
-
-````C#
-(NGuid)LocalClient.SelectedCreatureId.Value
 ````

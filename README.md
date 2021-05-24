@@ -7,4 +7,6 @@ Chat.md = Information regarding making assets speak both local and on all connec
 
 EnumeratingAssets.md = Information on how to obtain a list of all CreatureBoardAssets (minis)
 
+PositionRotation.md = Information on getting a mini's position and rotation information
+
 Selected.md = Code to determine the selected mini

@@ -1,6 +1,6 @@
 # Determine The Selected Mini
 
-To determine the selected mini, one can track what mini was picked up. This can be done using code similar to:
+To determine the selected mini (CreatureBoardAsset), one can track what mini was picked up. This can be done using code similar to:
 
 
 ````C#
@@ -25,3 +25,10 @@ void Update()
         }
     }
 }
+````
+
+Alternatively if you just want to know the CreatureId that is selcted, you can use:
+
+````C#
+(NGuid)LocalClient.SelectedCreatureId.Value
+````

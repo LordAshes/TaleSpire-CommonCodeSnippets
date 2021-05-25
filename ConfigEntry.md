@@ -28,7 +28,7 @@ public class AwesomePlugin: BaseUnityPlugin
         }
 
         void Update(){
-          if (Input.GetKey(KeyboardShortcut.Value.MainKey)){
+          if (KeyboardShortcut.Value.IsUp()){
             // Do Something
           }
         }

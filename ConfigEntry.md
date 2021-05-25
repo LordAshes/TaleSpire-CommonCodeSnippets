@@ -12,7 +12,7 @@ public class AwesomePlugin: BaseUnityPlugin
         private ConfigEntry<int> someNumber { get; set; }
 
         /// <summary>
-        /// Awake plugin
+        /// Awake - Executed Once On Plugin Load
         /// </summary>
         void Awake()
         {
@@ -20,13 +20,11 @@ public class AwesomePlugin: BaseUnityPlugin
             KeyboardShortcut = Config.Bind("Hotkeys", "Load Image Shortcut", new KeyboardShortcut(KeyCode.F1));
             text = Config.Bind("Hotkeys", "Clear Image Shortcut", "default string");
             someNumber = Config.Bind("Scale", "Scale Size", 40);
-
-            // Load mod name+version into main menu
-            ModdingTales.ModdingUtils.Initialize(this, Logger);
-            // Load PUP
-            PhotonUtilPlugin.AddMod(Guid);
         }
 
+        /// <summary>
+        /// Update - Executed Periodically While Plugin Is Running
+        /// </summary>
         void Update(){
           if (KeyboardShortcut.Value.IsUp()){
             // Do Something

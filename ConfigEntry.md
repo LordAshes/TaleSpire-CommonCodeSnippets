@@ -37,3 +37,5 @@ To allow extra keys you can pass them like this for keyboard shortcuts.
 ```csharp
     new KeyboardShortcut(KeyCode.P, KeyCode.LeftControl)
 ```
+
+When the plugin is run for the first time, R2ModMan will create a corresponding configuration for the plugin using the default setting provided in the Config.Bind code. You can then access this configuration using the Config Editor link in R2ModMan.

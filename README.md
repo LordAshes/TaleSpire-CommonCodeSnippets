@@ -11,11 +11,13 @@ Chat.md = Information regarding making assets speak both local and on all connec
 
 ChatMessageDetection.md = Information on how to read chat messages
 
-ConfigEntry.md = Defining configs that's updatable by user prior to runtime. Updatable in r2modman to.
+ConfigEntry.md = Defining configs that's updatable by user prior to runtime. Updatable in r2modman to
 
 EnumeratingAssets.md = Information on how to obtain a list of all CreatureBoardAssets (minis)
 
 InputBox.md = Create an input box prompting user input
+
+LoadingAssetBundlesAtRuntime.md = Information on loading assetBundle at runtime
 
 PositionRotation.md = Information on getting a mini's position and rotation information
 

@@ -15,6 +15,8 @@ ConfigEntry.md = Defining configs that's updatable by user prior to runtime. Upd
 
 EnumeratingAssets.md = Information on how to obtain a list of all CreatureBoardAssets (minis)
 
+Get TaleSpire_CustomData.md = Information on loading assets from other mods with same parent root folder.
+
 InputBox.md = Create an input box prompting user input
 
 LoadingAssetBundlesAtRuntime.md = Information on loading assetBundle at runtime

@@ -13,6 +13,8 @@ ChatMessageDetection.md = Information on how to read chat messages
 
 ConfigEntry.md = Defining configs that's updatable by user prior to runtime. Updatable in r2modman to
 
+CreatureIdToAsset.md = Obtaining a CreatureBoardAsset or Creature from a CreatureId
+
 EnumeratingAssets.md = Information on how to obtain a list of all CreatureBoardAssets (minis)
 
 Get TaleSpire_CustomData.md = Information on loading assets from other mods with same parent root folder.

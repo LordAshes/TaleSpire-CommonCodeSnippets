@@ -1,0 +1,9 @@
+#Plugins Folder
+
+If a plugin needs to access the BepInEx plugins folder (typically because it is searching if certain other plugins are installed or assets are installed)
+the folder can be obtained by
+
+C#```
+BepInEx.Paths.PluginPath
+```
+The BepInEx.Paths class has many different paths for things like the plugins folder, cache folder, executing assembly folder and so on.

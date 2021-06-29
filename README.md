@@ -23,6 +23,8 @@ InputBox.md = Create an input box prompting user input
 
 LoadingAssetBundlesAtRuntime.md = Information on loading assetBundle at runtime
 
+PluginsFolder.md = Information on how to get BepInEx related folders
+
 PositionRotation.md = Information on getting a mini's position and rotation information
 
 Selected.md = Code to determine the selected mini

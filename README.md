@@ -28,3 +28,5 @@ PluginsFolder.md = Information on how to get BepInEx related folders
 PositionRotation.md = Information on getting a mini's position and rotation information
 
 Selected.md = Code to determine the selected mini
+
+Spawn.md = Spawning a mini and adding to the board save process

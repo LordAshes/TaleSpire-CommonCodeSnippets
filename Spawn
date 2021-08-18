@@ -1,0 +1,8 @@
+The following code can be used to spawn a new mini and add it into the saving process:
+```
+CreatureDataV1 creatureDataV1 = new CreatureDataV1(new Bounce.Unmanaged.NGuid(boardAssetId));
+CreatureDataV2 creatureDataV2 = new CreatureDataV2(creatureDataV1);
+creatureDataV2.CreatureId = new CreatureGuid(new Bounce.Unmanaged.NGuid(Guid.NewGuid()));
+CreatureManager.CreateAndAddNewCreature(creatureDataV2, position, Quaternion.identity);
+BuildingBoardTool.RecordInBuildHistory(creatureDataV2.GetActiveBoardAssetId());
+```

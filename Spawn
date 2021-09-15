@@ -1,6 +1,6 @@
 The following code can be used to spawn a new mini and add it into the saving process:
 
-```
+```C#
 CreatureDataV1 creatureDataV1 = new CreatureDataV1(*baseMiniNGuid*);
 creatureDataV1.CreatureId = new CreatureGuid(new Bounce.Unmanaged.NGuid(System.Guid.NewGuid()));
 
@@ -14,7 +14,7 @@ Where *baseMiniNGuid* is the NGuid associated with the asset you are trying to s
 
 The following code can be used to look up a Nguid based on content name;
 
-```
+```C#
 private static NGuid FindAsset(string contentName)
 {
     foreach ((AssetDb.DbEntry.EntryKind, List<AssetDb.DbGroup>) kind in AssetDb.GetAllGroups())

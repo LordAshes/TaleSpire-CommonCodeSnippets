@@ -7,3 +7,23 @@ The following code can be used to spawn a new mini and add it into the saving pr
             creatureDataV2.CreatureId = creatureDataV1.CreatureId;
 
             CreatureManager.CreateAndAddNewCreature(creatureDataV2, position, Quaternion.Euler(0, 0, 0), false, true);
+            
+Where *baseMiniNGuid* is the NGuid associated with the asset you are trying to spawn and can be looked up from the AssetDB.
+
+The following code can be used to look up a Nguid based on content name;
+
+        private static NGuid FindAsset(string contentName)
+        {
+            foreach ((AssetDb.DbEntry.EntryKind, List<AssetDb.DbGroup>) kind in AssetDb.GetAllGroups())
+            {
+                foreach (AssetDb.DbGroup group in kind.Item2)
+                {
+                    foreach (AssetDb.DbEntry item in group.Entries)
+                    {
+                        if (item.Name == contentName) { return item.Id; }
+                    }
+                }
+            }
+            return NGuid.Empty;
+        }
+

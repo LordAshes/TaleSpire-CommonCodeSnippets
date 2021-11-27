@@ -24,7 +24,8 @@ If you are going to make content, please register your initials with Lord Ashes 
 TaleSpire Modding Discord) so that others don't use the same initials. Registered initials will be
 listed here:
 
-```la = LordAshes
+```
+la = LordAshes
 hf = HolloFox
 ```
 

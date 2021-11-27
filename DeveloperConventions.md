@@ -25,7 +25,8 @@ TaleSpire Modding Discord) so that others don't use the same initials. Registere
 listed here:
 
 ```la = LordAshes
-hf = HolloFox```
+hf = HolloFox
+```
 
 
 ## Size Convention

@@ -43,6 +43,10 @@ along the side each creature takes up. A vlaue of 2 means the creature takes up 
 A value of 3 means the creature takes up an area of 3x3 (9 tiles) and so on. A value of 0.5 means the
 creature takes up less than a 1x1 tile.
 
+Within the base size group, the mini should be sized according to its size in realation to the core
+TS mini races. For example, dwarves should be shorter than humans and humans should be shorter than
+goliaths.
+
 Please note that this function is not yet implemented by the Extra Asset Library (EAL) as this time but
 it is already implemented in EAR and passed to (EAL). Thus, as soon as EAL is updated to use this value
 all assets with the value set will span at the specified size when added to the board.
@@ -110,3 +114,25 @@ reasons: 1) to limit the number of plugins that appear on the front page and 2) 
 a user is interested in. For example, the user does not care about the File Access Plugin, Radial UI plugin
 and/or the Stat Messaging plugin plugin. The user cares about plugins like EAR, CMP, Icons, Hide Volume and
 so on which actually provide him/her with additional functionality.
+
+
+## Asset Bundle Building: Info.txt and Portrait.PNG
+
+When creating assets while it is not necessary to include a info.txt and/or portrait.png file, it is highly
+recommended. Inclduing these will give your asset more user friendly value because it means that the asset
+can be placed in the correct group in the library and it will show up with a custom image icon instea of the
+default sad face. The details of the info.txt file format can be obtained in the Extra Asset Registration
+plugin documentation (https://talespire.thunderstore.io/package/LordAshes/ExtraAssetsRegistrationPlugin/).
+
+
+## Asset Bundle Building: Low-res And Hi-res Assets
+
+If you are planning to create either high resolution assets or animated assets consider providing two
+versions of the asset in the same assetBundle. Make the first version of the asset with a poly count
+between 5k and 12k and remove any animations. If the mesh comes with animations then just remove then
+from the animation tab. Name the prefab using the desired name (also the name of the assetBundle). Do not
+use underscores in the name since they can cause issues. Next create a second prefab with the desired
+higher poly count and/or with animations. Save this prefab in the same assetBundle but with the name
+appended with ```_high```. For example, laWizard01 and lkWizard01_high. Future versions of EAR will have
+as setting which will allow users to select the low CPU/GPU assets (when the device is not so powerful)
+or the high CPU/GPU assets (when the device is sufficiently powerful).

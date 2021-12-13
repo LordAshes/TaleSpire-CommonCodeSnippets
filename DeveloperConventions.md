@@ -27,6 +27,7 @@ listed here:
 ```
 la = LordAshes
 hf = HolloFox
+sc = Scott Cross
 ```
 
 

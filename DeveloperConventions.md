@@ -134,6 +134,36 @@ between 5k and 12k and remove any animations. If the mesh comes with animations 
 from the animation tab. Name the prefab using the desired name (also the name of the assetBundle). Do not
 use underscores in the name since they can cause issues. Next create a second prefab with the desired
 higher poly count and/or with animations. Save this prefab in the same assetBundle but with the name
-appended with ```_high```. For example, laWizard01 and lkWizard01_high. Future versions of EAR will have
+appended with ```high```. For example, laWizard01 and lkWizard01high. Future versions of EAR will have
 as setting which will allow users to select the low CPU/GPU assets (when the device is not so powerful)
 or the high CPU/GPU assets (when the device is sufficiently powerful).
+
+Do not use _ or other special characters in the name since they can produce issues with features such
+as animation and/or sound.
+
+## Asset Bundle Building: Animating Assets
+
+Any animates assets should follow the ```high``` naming convention even if this is the only version of
+the asset that the asset bundle is providing. This is important so that possible future plugins can
+determine which asset bundles are high performance only.
+
+The latest version of EAR does not require hot key animations to be named Anim01, Anim02, ..., Anim07.
+Instead the hot keys just trigger the first thru seventh animation. However, this does not always match
+the order in which the animations have been listed in Unity. As such plugins cannot rely on the order
+to determine which animation is which. To maximize the compatibility of an asset with future ruleset
+it is recommended to include the following animations with the following names. This will allow plugins
+to search for those names to see if a asset supports them:
+
+```
+Idle = A static pose or animation representing the default character pose or animation.
+Ready = An alert of battle stance pose or animation used in combat (or other alert situations).
+Melee = A melee attack animation. Plays once.
+Range = A range attack animation. Plays once.
+Magic = A magic attack animation. Plays once.
+Death = A falling over animation. Clamped in last frame.
+```
+
+All of these animations are optional but if present using the indicated name will ensure that plugins
+can automatically make use of the animations. Obviously the asset can include any number of additional
+animations either triggered by the hot keys and/or triggered by the play anmation option and entering
+the animation name.

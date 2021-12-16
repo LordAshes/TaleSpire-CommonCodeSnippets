@@ -122,6 +122,16 @@ and/or the Stat Messaging plugin plugin. The user cares about plugins like EAR, 
 so on which actually provide him/her with additional functionality.
 
 
+## Asset Bundle Building: Screen Shot
+
+Where possible please include a screen shot (or screen shots) of the plugin or contenst so that user can see
+what the plugin or custom content looks like. To include a screen shot in the documentation, use:
+
+```![Preview](https://i.imgur.com/xSRC6ZV.png)```
+
+Where the content is brackets is to the URL of the image. You can use a free hosting site like imgur.
+
+
 ## Asset Bundle Building: Dependencies
 
 When creating asset bundles with non-plugin content (e.g. minis, effects, etc) only, then do not specify any

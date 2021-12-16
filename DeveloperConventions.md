@@ -32,6 +32,9 @@ ph = Phenex
 mm = Mark Miller
 ```
 
+If your assets are using CMP (i.e. they are OBJ/MTL files) then list the names in your asset pack
+so that users know what names to use to transform into the content. This is not necessary for
+asset bundles since they will in the library when using EAR. 
 
 ## Size Convention
 
@@ -117,6 +120,17 @@ reasons: 1) to limit the number of plugins that appear on the front page and 2) 
 a user is interested in. For example, the user does not care about the File Access Plugin, Radial UI plugin
 and/or the Stat Messaging plugin plugin. The user cares about plugins like EAR, CMP, Icons, Hide Volume and
 so on which actually provide him/her with additional functionality.
+
+
+## Asset Bundle Building: Dependencies
+
+When creating asset bundles with non-plugin content (e.g. minis, effects, etc) only, then do not specify any
+dependencies like Extra Asset Registration plugin or Custom Mini Plugin. While there may be intended plugins 
+that the assets are to be used with, this forces users to load plugins they don't want if they are using
+the asset with a different plugin. For example, a user may want to use an asset with Replicator plugin but
+not install CMP. List any recommendations or resitrctions in your document description instead. For example,
+"Compatible with EAR" or "Requires OBJ/MTL Loader (e.g. CMP)". However, do not put it as a dependency in
+the manifest.json file.
 
 
 ## Asset Bundle Building: Info.txt and Portrait.PNG

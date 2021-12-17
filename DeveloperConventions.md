@@ -25,11 +25,12 @@ TaleSpire Modding Discord) so that others don't use the same initials. Registere
 listed here:
 
 ```
-la = LordAshes
 hf = HolloFox
-sc = Scott Cross
-ph = Phenex
+la = LordAshes
 mm = Mark Miller
+ph = Phenex
+sc = Scott Cross
+si = simsete
 ```
 
 If your assets are using CMP (i.e. they are OBJ/MTL files) then list the names in your asset pack

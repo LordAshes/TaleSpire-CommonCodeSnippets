@@ -239,3 +239,11 @@ The Default.png file is in plugins but not in CustomData. This means that R2ModM
 but it will not be accessible to File Access Plugin. This makes that file specific to this plugin
 but not accessible by other plugins. This is in contrast all of the files which are in the CustomData
 folder making them accessible to File Access Plugin and thus potentially usable by other plugins.
+
+The easiest way to get the correct format for the mandatory files is to copy them from another pack.
+However, the manifest.json file and the Readme.Md file will need to be modified for your specific
+content before they can be used.
+
+The manifest.json file provides a unique name and version for the pack. If you upload a pack with
+the same name but a higher version, Thunderstore/R2ModMan will update the existing pack instead
+of installing it as a new pack. The manifest.json file also indicated the pack dependencies

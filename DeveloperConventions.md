@@ -196,3 +196,46 @@ All of these animations are optional but if present using the indicated name wil
 can automatically make use of the animations. Obviously the asset can include any number of additional
 animations either triggered by the hot keys and/or triggered by the play anmation option and entering
 the animation name.
+
+## R2ModMan/Thunderstore Pack Building
+
+If you plan to make a R2ModMan compatible pack (such as those distribued by Thunderstore) then follow
+the following steps:
+
+1. The pack is a ZIP file which contains the pack mandatory files (see below) and the pack contents.
+2. The pack mandatory files consists of: icon.png, LICENSE.TXT, manifest.json, Readme.Md
+3. If the pack includes a plugin DLL then place it in the root folder along with the mandatory files.
+4. Any non-plugin files need to be placed in a "plugins" sub-folder in order to be deploayed correctly.
+5. Any non-plugin files that are to be accessible by plugins should be in a "CustomData" sub-folder.
+6. Custom content for CMP and/or EAR must be in a folder that matches the asset bundle file.
+
+It is customary (but not required) for the CustomData folder to be sub-divied by type such as "Minis",
+"Images", "Configruation", "Misc", etc.
+
+For example, here is file layout of a sample plugin:
+
+```
+\ExtraAssetsRegistrationPlugin.dll
+\icon.png
+\LICENSE.txt
+\list.txt
+\manifest.json
+\plugins
+\README.md
+\plugins\Default.png
+\plugins\CustomData\Minis\cockerel\cockerel
+\plugins\CustomData\Minis\obassasin01\obassasin01
+\plugins\CustomData\Slabs\dgambertemplelibrary\dgambertemplelibrary
+\plugins\CustomData\Slabs\temple01\info.txt
+\plugins\CustomData\Slabs\temple01\portrait.png
+\plugins\CustomData\Slabs\temple01\temple01.slab
+```
+
+As can be seen all non-plugin data is in a plugins/CustomData sub-folder structure. The content is
+then sub-divided into Minis and Slabs. Any files associated with an asset bundle (such as cockerel)
+is in a folder that matches the asset bundle name.
+
+The Default.png file is in plugins but not in CustomData. This means that R2ModMan will deloy it
+but it will not be accessible to File Access Plugin. This makes that file specific to this plugin
+but not accessible by other plugins. This is in contrast all of the files which are in the CustomData
+folder making them accessible to File Access Plugin and thus potentially usable by other plugins.

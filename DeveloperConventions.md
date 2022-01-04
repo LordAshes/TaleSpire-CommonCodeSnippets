@@ -25,14 +25,14 @@ TaleSpire Modding Discord) so that others don't use the same initials. Registere
 listed here:
 
 ```
-bc = branden
-gp = gonsplitters
+bc = Branden
+gp = Gonsplitters
 hf = HolloFox
 la = LordAshes
 mm = Mark Miller
 ph = Phenex
 sc = Scott Cross
-si = simsete
+si = Simsete
 ```
 
 If your assets are using CMP (i.e. they are OBJ/MTL files) then list the names in your asset pack

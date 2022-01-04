@@ -125,27 +125,6 @@ and/or the Stat Messaging plugin plugin. The user cares about plugins like EAR, 
 so on which actually provide him/her with additional functionality.
 
 
-## Asset Bundle Building: Screen Shot
-
-Where possible please include a screen shot (or screen shots) of the plugin or contenst so that user can see
-what the plugin or custom content looks like. To include a screen shot in the documentation, use:
-
-```![Preview](https://i.imgur.com/xSRC6ZV.png)```
-
-Where the content is brackets is to the URL of the image. You can use a free hosting site like imgur.
-
-
-## Asset Bundle Building: Dependencies
-
-When creating asset bundles with non-plugin content (e.g. minis, effects, etc) only, then do not specify any
-dependencies like Extra Asset Registration plugin or Custom Mini Plugin. While there may be intended plugins 
-that the assets are to be used with, this forces users to load plugins they don't want if they are using
-the asset with a different plugin. For example, a user may want to use an asset with Replicator plugin but
-not install CMP. List any recommendations or resitrctions in your document description instead. For example,
-"Compatible with EAR" or "Requires OBJ/MTL Loader (e.g. CMP)". However, do not put it as a dependency in
-the manifest.json file.
-
-
 ## Asset Bundle Building: Info.txt and Portrait.PNG
 
 When creating assets while it is not necessary to include a info.txt and/or portrait.png file, it is highly
@@ -197,7 +176,7 @@ can automatically make use of the animations. Obviously the asset can include an
 animations either triggered by the hot keys and/or triggered by the play anmation option and entering
 the animation name.
 
-## R2ModMan/Thunderstore Pack Building
+## R2ModMan/Thunderstore Pack: ZIP File Structure
 
 If you plan to make a R2ModMan compatible pack (such as those distribued by Thunderstore) then follow
 the following steps:
@@ -246,4 +225,34 @@ content before they can be used.
 
 The manifest.json file provides a unique name and version for the pack. If you upload a pack with
 the same name but a higher version, Thunderstore/R2ModMan will update the existing pack instead
-of installing it as a new pack. The manifest.json file also indicated the pack dependencies
+of installing it as a new pack. The manifest.json file also indicated the pack dependencies that
+are needed to make your pack work. See discussion of pack dependencies below.
+
+The readme.md file should describe the plugin. Highly recommended sections in the document are:
+general description, installation, usage, and change log. Other sections can be added as needed
+such as a demo section (when the plugin includes some demo assets), limiations section when the
+plugin is known to have certain limitations, and so on. If the pack is a visual pack (i.e.
+contains assets or is a plugin that has some visual effect) then it is highly recommened to
+include at least one preview image. See discussion of pack screen shots below.
+
+
+## R2ModMan/Thunderstore Pack: Screen Shot
+
+Where possible please include a screen shot (or screen shots) of the plugin or contenst so that user can see
+what the plugin or custom content looks like. To include a screen shot in the documentation, use:
+
+```![Preview](https://i.imgur.com/xSRC6ZV.png)```
+
+Where the content is brackets is to the URL of the image. You can use a free hosting site like imgur.
+
+
+## Asset Bundle Building: Dependencies
+
+When creating asset bundles with non-plugin content (e.g. minis, effects, etc) only, then do not specify any
+dependencies like Extra Asset Registration plugin or Custom Mini Plugin. While there may be intended plugins 
+that the assets are to be used with, this forces users to load plugins they don't want if they are using
+the asset with a different plugin. For example, a user may want to use an asset with Replicator plugin but
+not install CMP. List any recommendations or resitrctions in your document description instead. For example,
+"Compatible with EAR" or "Requires OBJ/MTL Loader (e.g. CMP)". However, do not put it as a dependency in
+the manifest.json file.
+

@@ -25,7 +25,8 @@ TaleSpire Modding Discord) so that others don't use the same initials. Registere
 listed here:
 
 ```
-gp = gonsplitters:
+bc = branden
+gp = gonsplitters
 hf = HolloFox
 la = LordAshes
 mm = Mark Miller

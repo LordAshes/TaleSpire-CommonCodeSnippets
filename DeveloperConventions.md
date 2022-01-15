@@ -244,8 +244,11 @@ Please try to include one or more of the following words in your pack name to al
 easily search by pack names and find packs of certain types:
 
 ``Assets (Pack)`` = Indicates that the pack mostly consists of assets (minis, props, effects, etc)
+
 ``Plugin (Pack)`` = Indicates that the main content of the pack is a plugin.
+
 ``Configuration (Pack)`` = Indicates that the main content of the pack is configuration for plugins.
+
 ``Collection (Pack)`` = Indicates a mega pack consisting multiple other packs.
 
 For example, Dragons Assets Pack, Light Plugin Pack, Fairy Lights Configuration Pack, Icedale Collection.

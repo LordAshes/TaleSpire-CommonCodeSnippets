@@ -31,6 +31,7 @@ hf = HolloFox
 la = LordAshes
 mm = Mark Miller
 ph = Phenex
+qg = QGPikr
 sc = Scott Cross
 si = Simsete
 tp = Trash Panda

@@ -1,0 +1,73 @@
+using HarmonyLib;
+
+/// <summary>
+/// 
+/// Notes:
+/// 
+/// 1. Patches can be done on public and private classes and methods.
+/// 2. They are exectued before and/or after the original code executes using either or both Prefix/Postfix (case sensitive)
+/// 3. 
+/// 
+/// </summary>
+
+namespace LordAshes
+{
+    public class examplePublicClass{
+    
+        private class examplePrivateClass{
+          private bool _isFlying;
+          public gameObject model;
+          
+          private Void Awake() 
+          {
+            // Do Something
+          }
+          
+        }
+    
+        private bool _isFlying;
+        public gameObject model;
+        
+        public Void Update() 
+        {
+          // Do Something
+        }
+    }
+
+
+    [HarmonyPatch(assembly, method)]
+    internal class exampleClassPatch
+    {
+        // "<publicClass>+<privateClass>,<namespace>, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null";
+        private const string assembly = "examplePublicClass+examplePrivateClass,LordAshes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null";
+        private const string method = "Awake";
+        
+        // This runs before the core code is executed
+        public static <bool|void> Prefix(ref bool ____isFlying)
+        {
+            
+          return true; // Determines if core code runs 
+        }
+  
+        // This runs after the core code is executed
+        public static void Postfix(ref gameObject ___model)
+        {
+            // Always run even if core code skipped
+        }
+    }
+
+    [HarmonyPatch(typeof(examplePublicClass), "Update")]
+    internal class examplePublicClassPatch
+    {
+        public static <bool|void> Prefix(ref bool ____isFlying)
+        {
+            
+          return true; // Determines if core code runs 
+        }
+  
+        public static void Postfix(ref gameObject ___model)
+        {
+            // Always run even if core code skipped
+        }
+    }
+}

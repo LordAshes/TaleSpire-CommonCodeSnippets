@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
+using HarmonyLib;
 
 using UnityEngine;
 
@@ -99,6 +100,14 @@ namespace LordAshes
             // main page. FileAccessPlugin, on the other hand, only provide file access for other plugins and thus is not listed
             // on the main page.
             Utility.PostOnMainPage(this.GetType());
+
+            //
+            // (Optional) This is Required if Patches are being used
+            //
+            
+            // This tells harmony to enable your patches at runtime. On Awake will generally give the system enough time
+            // To patch the methods before they are called within the unity engine.
+            new Harmony(Guid).PatchAll();
         }
 
         /// <summary>

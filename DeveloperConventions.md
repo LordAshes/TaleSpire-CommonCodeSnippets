@@ -25,6 +25,7 @@ TaleSpire Modding Discord) so that others don't use the same initials. Registere
 listed here:
 
 ```
+az = AzureYukiPoo
 bc = Branden
 gp = Gonsplitters
 hf = HolloFox

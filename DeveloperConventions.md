@@ -36,6 +36,7 @@ qg = QGPikr
 sc = Scott Cross
 si = Simsete
 tp = Trash Panda
+ws = Wulfstahn
 ```
 
 If your assets are using CMP (i.e. they are OBJ/MTL files) then list the names in your asset pack

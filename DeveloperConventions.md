@@ -38,6 +38,7 @@ qg = QGPikr
 sc = Scott Cross
 si = Simsete
 tp = Trash Panda
+voh = Salcor
 ws = Wulfstahn
 ```
 

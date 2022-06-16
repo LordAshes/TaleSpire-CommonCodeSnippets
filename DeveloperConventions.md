@@ -39,6 +39,7 @@ sc = Scott Cross
 si = Simsete
 tp = Trash Panda
 voh = Salcor
+wr = Winglymeru
 ws = Wulfstahn
 ```
 

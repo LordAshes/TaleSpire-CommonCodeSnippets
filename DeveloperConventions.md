@@ -30,6 +30,7 @@ bc = Branden
 gho = NotoriousGhoul
 gp = Gonsplitters
 hf = HolloFox
+kit = Kitetsu
 kom = KaneOfMars
 la = LordAshes
 mm = Mark Miller

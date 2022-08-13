@@ -167,20 +167,14 @@ Any animates assets should follow the ```high``` naming convention even if this 
 the asset that the asset bundle is providing. This is important so that possible future plugins can
 determine which asset bundles are high performance only.
 
-The latest version of EAR does not require hot key animations to be named Anim01, Anim02, ..., Anim07.
-Instead the hot keys just trigger the first thru seventh animation. However, this does not always match
-the order in which the animations have been listed in Unity. As such plugins cannot rely on the order
-to determine which animation is which. To maximize the compatibility of an asset with future ruleset
-it is recommended to include the following animations with the following names. This will allow plugins
-to search for those names to see if a asset supports them:
-
 ```
-Idle = A static pose or animation representing the default character pose or animation.
-Ready = An alert of battle stance pose or animation used in combat (or other alert situations).
-Melee = A melee attack animation. Plays once.
-Range = A range attack animation. Plays once.
-Magic = A magic attack animation. Plays once.
-Death = A falling over animation. Clamped in last frame.
+Anim01 = (Idle) A static pose or animation representing the default character pose or animation.
+Amim02 = (Ready) An alert of battle stance pose or animation used in combat (or other alert situations).
+Anim03 = (Melee) An melee attack animation. Plays once.
+Anim04 = (Range) A range attack animation. Plays once.
+Anim05 = (Magic) A magic attack animation. Plays once.
+Anim07 = (Death) A falling over animation. Clamped in last frame.
+Anim08 = (Walk) A continious walking animation.
 ```
 
 All of these animations are optional but if present using the indicated name will ensure that plugins

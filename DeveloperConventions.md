@@ -27,6 +27,7 @@ listed here:
 ```
 az = AzureYukiPoo
 bc = Branden
+eem = EemFoo
 gho = NotoriousGhoul
 gp = Gonsplitters
 hf = HolloFox

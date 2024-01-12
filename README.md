@@ -30,3 +30,5 @@ PositionRotation.md = Information on getting a mini's position and rotation info
 Selected.md = Code to determine the selected mini
 
 Spawn.md = Spawning a mini and adding to the board save process
+
+[TalespireTemplatePlugin] contains a plugin template C# project which can be used as a template to make new plugins.
